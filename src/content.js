@@ -3,7 +3,7 @@ const NEARBY_ANCESTORS = 4
 const SCAN_DELAY_MS = 100
 const clickedWhileChecked = new WeakSet()
 
-export function uncheckFollowBoxes(root) {
+function uncheckFollowBoxes(root) {
   const inputs = root.querySelectorAll('input[type="checkbox"]')
   for (const input of inputs) {
     if (!isFollowCheckbox(input)) continue

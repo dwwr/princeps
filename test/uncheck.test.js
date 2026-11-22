@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import { parseHTML } from 'linkedom'
-import { uncheckFollowBoxes } from '../src/content.js'
+
+const source = readFileSync(new URL('../src/content.js', import.meta.url), 'utf8')
+const { uncheckFollowBoxes } = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(`${source}\nexport { uncheckFollowBoxes }\n`)}`
+)
 
 const pasted = `
 <div class="cfsa2a cfsfyi cfsgh6 cfskdg"><div class="cfsh94 cfsgh6 cfsf1u cfsjdx cfsjdo cfskdg"><input id="_r_275_" class="cfskgx cfskej cfskei cfsjgf cfsjhb cfsjh7 cfsji3 cfsh9o cfsjrd cfsfxa cfsgdm" tabindex="0" aria-label="Follow FutureTech Recruitment to stay up to date with their page" type="checkbox" checked=""><label class="cfskg1 cfskg0 cfsayi cfsh94 cfskdg" for="_r_275_"></label></div></div><div class="cfskdm cfsg3i cfsjj1 cfsjki cfsjk2 cfsayy cfsg2e cfsh9i cfsh8z cfsh9a cfsg42 cfsf9m cfskdg"><p class="cfsjq5 cfsjwr cfsjqj cfseq8 cfsjq3 cfsjzq">Follow FutureTech Recruitment to stay up to date with their page</p></div>
