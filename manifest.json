@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Princeps",
+  "version": "0.1.0",
+  "description": "Unchecks LinkedIn's pre-selected Follow company box on Easy Apply. Unofficial; not affiliated with LinkedIn.",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*", "https://linkedin.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "princeps@dwwr.github.io",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

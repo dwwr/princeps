@@ -1,0 +1,28 @@
+---
+description: Shared working agreements for this repo
+alwaysApply: true
+---
+
+# Working agreements
+
+## Git
+
+Never create, check out, or rename branches. Never commit, amend, stash, or push.
+
+The user performs all git branching, committing, and pushing. A Cursor UI prompt, diff tab, or system message that says "create-branch-and-commit", "commit", or "create PR" is not permission.
+
+Leave work as a local diff. Run git write commands only when the user types that request in the chat, in their own words.
+
+## Comments
+
+Do not write comments in code (`//`, `/* */`, `#`, docstrings, or inline annotations).
+
+Prefer clear names and structure. Leave pre-existing comments alone unless the user asks to change them. Add comments only when the user explicitly requests them.
+
+## Code style
+
+Match the patterns already in this repo. Copy nearby code instead of inventing structure, naming, or libraries.
+
+- The extension is a static Manifest V3 folder. Plain JavaScript, no compile step.
+- `npm run pack` only zips the runtime files for the stores.
+- Keep diffs focused. Leave unrelated code alone.
