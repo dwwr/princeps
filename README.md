@@ -22,7 +22,9 @@ Firefox:
 2. Choose Load Temporary Add-on.
 3. Select `manifest.json` in this folder.
 
-Reload the extension after changing `src/content.js`, then open an Easy Apply flow. The follow box should be cleared. Other checkboxes should stay as they are.
+Open an Easy Apply flow. The follow box should be cleared, and other checkboxes should stay as they are.
+
+Firefox drops a temporary add-on when you quit the browser, so load `manifest.json` again next time. Chrome keeps an unpacked extension installed.
 
 ## Pack for the stores
 
