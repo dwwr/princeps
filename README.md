@@ -4,6 +4,8 @@ Princeps (n., latin): prince, chief, first & foremost, first among many, not a f
 
 LinkedIn Easy Apply postings almost always pre-check "Follow [company] to stay up to date with their page." How much time have you already wasted unchecking that box again & again? How many of those postings are ghost jobs, collecting followers for their company pages?
 
+This extension automatically unchecks that box.
+
 The job applicant is princeps, first among many. They are not a free follower.
 
 <img width="485" height="416" alt="Screenshot 2026-11-22 at 10 51 44 AM" src="https://github.com/user-attachments/assets/89ea101a-61a0-4a70-8ed6-63080eec936c" />
